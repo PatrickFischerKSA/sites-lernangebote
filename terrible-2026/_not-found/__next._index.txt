@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
 2:I[9155,[],""]
 3:I[3135,[],""]
-:HL["/sites-lernangebote/terrible-2026/_next/static/css/05c2e68ab0e7ce2f.css","style"]
-0:{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/sites-lernangebote/terrible-2026/_next/static/css/05c2e68ab0e7ce2f.css","precedence":"next"}]],["$","html",null,{"lang":"de","children":["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"7g_wg_fAGWNj1_gyseUv6"}
+:HL["/sites-lernangebote/terrible-2026/_next/static/css/9ee591f917dd51ef.css","style"]
+0:{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/sites-lernangebote/terrible-2026/_next/static/css/9ee591f917dd51ef.css","precedence":"next"}]],["$","html",null,{"lang":"de","children":["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"N4oLl9hkvBWBPHZ-Rc0P-"}
