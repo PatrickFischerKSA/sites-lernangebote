@@ -1,0 +1,5 @@
+1:"$Sreact.fragment"
+2:I[8643,[],""]
+3:I[7279,[],""]
+:HL["/sites-lernangebote/odysseus-reisekarte/_next/static/css/1186f4c3484da0a5.css","style"]
+0:{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/sites-lernangebote/odysseus-reisekarte/_next/static/css/1186f4c3484da0a5.css","precedence":"next"}]],["$","html",null,{"lang":"de-CH","children":["$","body",null,{"className":"__variable_6d98b3 __variable_f43bc9 antialiased","children":["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"yFP5ZChFoofwoyhwoynGc"}

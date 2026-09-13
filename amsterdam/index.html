@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#12344d">
+  <meta name="description" content="Der persönliche Amsterdam-Reiseführer für Rafael und Sabine.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Rafael &amp; Sabine in Amsterdam</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <header class="hero" id="start">
+    <nav class="topbar" aria-label="Hauptnavigation">
+      <a class="brand" href="#start" aria-label="Zur Startseite"><span>AMS</span> R &amp; S</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="navlinks">Menü</button>
+      <div class="navlinks" id="navlinks"><a href="#entdecken">Entdecken</a><a href="#orte">Orte</a><a href="#karte">Karte</a><a href="#reisebereich">Unsere Reise</a></div>
+    </nav>
+    <div class="hero-content">
+      <p class="eyebrow">PERSÖNLICHER CITY GUIDE · <span id="date"></span></p>
+      <p class="weather" id="weather" aria-live="polite">Amsterdam-Wetter wird geladen …</p>
+      <h1>Rafael &amp; Sabine<br><em>in Amsterdam</em></h1>
+      <p class="lead">Unsere Orte, unsere Wege, unsere Amsterdam-Reise.</p>
+      <div class="hero-actions"><a class="btn primary" href="#karte">Karte öffnen</a><a class="btn glass" href="#entdecken">Tour starten</a></div>
+      <div class="progress-card"><div><strong id="progressText">0 von 10 Orten besucht</strong><span>Amsterdam wartet auf euch</span></div><div class="progress"><i id="progressBar"></i></div></div>
+    </div>
+    <div class="houses" aria-hidden="true"></div>
+  </header>
+
+  <main id="main">
+    <section class="section intro" id="entdecken">
+      <p class="eyebrow red">SPONTAN ENTDECKEN</p>
+      <h2>Wohin als Nächstes?</h2>
+      <p class="section-lead">Keine Tageslisten, kein Zeitdruck: Entdeckt einen Vorschlag, besucht ihn – oder überspringt ihn einfach.</p>
+      <article class="discovery" id="discovery" aria-live="polite"></article>
+    </section>
+
+    <section class="section map-section" id="karte">
+      <div class="section-heading"><div><p class="eyebrow">ALLE ZIELE</p><h2>Amsterdam auf der Karte</h2></div><button class="btn location" id="locate">◎ Unseren Standort anzeigen</button></div>
+      <p class="privacy-note">Der Standort wird nur nach Tippen auf die Schaltfläche abgefragt, nicht gespeichert und nicht im Hintergrund verfolgt.</p>
+      <div class="map-tools" aria-label="Kartenfilter">
+        <button class="chip active" data-filter="all">Alle Orte</button><button class="chip" data-filter="included">City Card</button><button class="chip" data-filter="free">Kostenlos</button><button class="chip" data-filter="food">Essen &amp; Markt</button><button class="chip" id="nearby">In unserer Nähe</button>
+      </div>
+      <div id="map" role="application" aria-label="Interaktive Karte mit zehn Reisezielen"></div>
+      <p id="geoStatus" class="status" role="status"></p>
+    </section>
+
+    <section class="section" id="orte">
+      <div class="section-heading"><div><p class="eyebrow red">ZEHN LIEBLINGSORTE</p><h2>Orte mit Geschichte</h2></div><label class="sort">Sortieren <select id="sort"><option value="default">Unsere Auswahl</option><option value="distance">Entfernung</option><option value="name">Name A–Z</option></select></label></div>
+      <div class="filters" id="filters" aria-label="Ortsfilter"></div>
+      <div class="places" id="places"></div>
+    </section>
+
+    <section class="section city-card" id="citycard">
+      <div><p class="eyebrow">I AMSTERDAM CITY CARD</p><h2>Mehr erleben,<br>weniger organisieren.</h2><p>Grachtenfahrt, STRAAT, Fabrique des Lumières, Oude Kerk und This is Holland sind gemäss aktuellem Angebot inbegriffen. Bei This is Holland ist ein kostenloses Zeitfenster erforderlich.</p><a class="text-link" href="https://www.iamsterdam.com/en/tickets/i-amsterdam-city-card" target="_blank" rel="noopener">Aktuelle Bedingungen prüfen ↗</a></div>
+      <div class="card-list"><h3>Inbegriffen</h3><ul><li>Eine teilnehmende Grachtenfahrt</li><li>STRAAT Museum</li><li>Fabrique des Lumières</li><li>Oude Kerk</li><li>This is Holland <strong>· Reservierung erforderlich</strong></li><li>GVB-Nahverkehr &amp; 24-h-Velomiete*</li></ul><small>*Leistungen und Bedingungen können sich ändern. Vor dem Besuch offizielle Seiten prüfen.</small></div>
+    </section>
+
+    <section class="section personal" id="reisebereich">
+      <p class="eyebrow red">NUR AUF DIESEM GERÄT</p><h2>Unsere Reiseecke</h2>
+      <div class="personal-grid">
+        <div class="panel"><h3>Pack- &amp; Merkliste</h3><form id="todoForm"><label class="sr-only" for="todoInput">Neuer Eintrag</label><input id="todoInput" placeholder="z. B. City Card einpacken" maxlength="90"><button class="btn primary">Hinzufügen</button></form><ul id="todoList" class="todo-list"></ul></div>
+        <div class="panel"><h3>Unsere Amsterdam-Fotos</h3><p>Fotos bleiben lokal in diesem Browser und werden nicht hochgeladen.</p><label class="photo-picker">＋ Fotos auswählen<input id="photos" type="file" accept="image/*" multiple></label><div id="photoGrid" class="photo-grid"></div></div>
+      </div>
+      <button class="reset" id="reset">Reisedaten zurücksetzen</button>
+    </section>
+  </main>
+
+  <footer><strong>Rafael &amp; Sabine in Amsterdam</strong><span>Mit Liebe für eure Reise gemacht · Standort und persönliche Daten bleiben lokal.</span><a href="#start">Nach oben ↑</a></footer>
+  <dialog id="privacy"><button class="dialog-close" aria-label="Hinweis schliessen">×</button><span class="dialog-icon">⌖</span><h2>Eure Daten bleiben bei euch.</h2><p>Diese Webseite verwendet euren Standort nur dann, wenn ihr die Standortanzeige ausdrücklich aktiviert. Standort, Notizen und Besuchsstatus werden nicht an einen Server übertragen.</p><button class="btn primary accept">Verstanden</button></dialog>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

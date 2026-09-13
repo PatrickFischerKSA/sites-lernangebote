@@ -1,0 +1,5 @@
+1:"$Sreact.fragment"
+2:I[9155,[],""]
+3:I[3135,[],""]
+:HL["/sites-lernangebote/abschlussarbeits-selbstcheck/_next/static/css/797e6d433ccb00ac.css","style"]
+0:{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/sites-lernangebote/abschlussarbeits-selbstcheck/_next/static/css/797e6d433ccb00ac.css","precedence":"next"}]],["$","html",null,{"lang":"de-CH","children":["$","body",null,{"className":"__variable_bec9ed __variable_dd6ef8","children":["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"e7GUh84F_Em_VXybJgS_M"}
